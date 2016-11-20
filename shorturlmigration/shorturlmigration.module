@@ -1,0 +1,24 @@
+<?php
+
+
+/*
+ * You must implement hook_migrate_api(), setting the API level to 2, for
+ * your migration classes to be recognized by the Migrate module.
+ */
+function shorturlmigration_migrate_api() {
+    $api = array(
+        'api' => 2,
+        'groups' => array(
+            'shorturlgroup' => array(
+                'title' => t('Migrate Short-URLs'),
+            ),
+        ),
+        'migrations' => array(
+            'ShortURL' => array(
+                'class_name' => 'ShortURLMigration',
+                'group_name' => 'shorturlgroup',
+            ),
+        ),
+    );
+    return $api;
+}

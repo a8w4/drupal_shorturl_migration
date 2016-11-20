@@ -1,0 +1,7 @@
+name = "Short-URL Migration"
+description = "Migrate Short-URL to ShURLy Module in Drupal 7"
+version = "7.x-1.1"
+package = "Migration"
+core = 7.x
+dependencies[] = migrate
+files[] = shorturlmigration.migrate.inc
